@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Devil Vaish</title>
+<style>
+/* GENERAL DESIGN */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #fffdf7;
+    color: #171717;
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: center;
+}
+/* GOLD COLOURS */
+:root {
+    --gold: #c5a34a;
+    --lightgold: #f7edcf;
+    --white: #fffdf7;
+}
+/* PASSWORD PAGE */
+#lockPage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, white, #f5e8c4);
+}
+.lock-box {
+    background: white;
+    border: 4px double var(--gold);
+    padding: 40px 25px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 0 25px #ddc987;
+}
+.lock-box h1 {
+    color: var(--gold);
+    font-size: 34px;
+}
+.lock-box p {
+    line-height: 1.8;
+}
+input {
+    width: 90%;
+    padding: 13px;
+    border: 1px solid var(--gold);
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: center;
+    margin: 15px 0;
+}
+/* BUTTONS */
+button {
+    font-family: Georgia, serif;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.gold-button {
+    background: var(--gold);
+    color: white;
+    border: 1px solid var(--gold);
+    padding: 13px 28px;
+    font-size: 16px;
+}
+.gold-button:hover {
+    background: #a88735;
+}
+/* MAIN PAGE */
+#mainPage {
+    display: none;
+    padding: 20px 15px 40px;
+}
+/* HEADER */
+.header {
+    max-width: 750px;
+    margin: 20px auto 35px;
+    padding: 35px 20px;
+    background: white;
+    border: 4px double var(--gold);
+    box-shadow: 0 0 15px #eadba9;
+}
+.header h1 {
+    color: var(--gold);
+    font-size: 42px;
+}
+.header p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+.gold-line {
+    width: 100px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px auto;
+}
+/* LETTER BUTTONS */
+.letters {
+    max-width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.letter-btn {
+    background: white;
+    border: 2px solid var(--gold);
+    padding: 23px 10px;
+    font-size: 17px;
+    color: black;
+    box-shadow: 0 3px 8px #eadba9;
+}
+.letter-btn:hover {
+    background: var(--lightgold);
+    transform: translateY(-4px);
+}
+.letter-btn:last-child {
+    grid-column: span 2;
+}
+/* POP-UP BACKGROUND */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.78);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+/* POP-UP CONTENT */
+.popup-content {
+    background: var(--white);
+    border: 4px double var(--gold);
+    padding: 22px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 25px #e4cb83;
+    animation: appear 0.4s ease;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.popup-content h2 {
+    color: var(--gold);
+    font-size: 27px;
+}
+/* PICTURE BORDERS */
+.popup-content img {
+    width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    background: white;
+    border: 4px double var(--gold);
+    padding: 6px;
+}
+/* MESSAGE BORDERS */
+.message {
+    border: 2px solid var(--gold);
+    padding: 20px;
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: left;
+    background: white;
+}
+/* CLOSE BUTTON */
+.close-btn {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.close-btn:hover {
+    background: #a88735;
+}
+/* FINAL FRIENDSHIP NOTE */
+.bottom-note {
+    max-width: 700px;
+    margin: 50px auto 15px;
+    padding: 30px 22px;
+    background: white;
+    border: 4px double var(--gold);
+    box-shadow: 0 0 15px #eadba9;
+    font-size: 18px;
+    line-height: 2;
+}
+.bottom-note h2 {
+    color: var(--gold);
+}
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 500px) {
+    .header h1 {
+        font-size: 32px;
+    }
+    .letters {
+        grid-template-columns: 1fr;
+    }
+    .letter-btn:last-child {
+        grid-column: span 1;
+    }
+    .popup-content {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+<body>
+<!-- ================================= -->
+<!-- PASSWORD PAGE -->
+<!-- ================================= -->
+<div id="lockPage">
+<div class="lock-box">
+    <h1>A Little Something for Vaish</h1>
+    <div class="gold-line"></div>
+    <p>
+        A little birthday surprise awaits you.
+    </p>
+    <p>
+        But first, you'll need the password.
+    </p>
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+    >
+    <br>
+    <button class="gold-button" onclick="unlock()">
+        Unlock Your Surprise
+    </button>
+    <p id="error" style="color:red;"></p>
+</div>
+</div>
+<!-- ================================= -->
+<!-- MAIN BIRTHDAY PAGE -->
+<!-- ================================= -->
+<div id="mainPage">
+<div class="header">
+    <h1>Happy Birthday, Vaish!</h1>
+    <div class="gold-line"></div>
+    <p>
+        To my dear Devil Vaish,
+        <br><br>
+        Another year, another reason to celebrate you.
+        I have put together a few little messages
+        and memories for your special day.
+        <br><br>
+        Take your time and open each one.
+        I hope they bring a smile to your face.
+    </p>
+</div>
+<!-- FIVE LETTER BUTTONS -->
+<div class="letters">
+    <button class="letter-btn" onclick="openLetter(1)">
+        01. A Birthday Wish
+    </button>
+    <button class="letter-btn" onclick="openLetter(2)">
+        02. Future Doctor
+    </button>
+    <button class="letter-btn" onclick="openLetter(3)">
+        03. A Little Apology
+    </button>
+    <button class="letter-btn" onclick="openLetter(4)">
+        04. Never Change, Vaish
+    </button>
+    <button class="letter-btn" onclick="openLetter(5)">
+        05. Your Future Awaits
+    </button>
+</div>
+<!-- ================================= -->
+<!-- LETTER 1 -->
+<!-- ================================= -->
+<div class="popup" id="popup1">
+    <div class="popup-content">
+        <h2>A Birthday Wish</h2>
+        <img src="vaish1.jpg" alt="Vaish picture 1">
+        <div class="message">
+            Happy Birthday, Vaish!
+            <br><br>
+            I hope you have an amazing birthday.
+            Enjoy your special day, make wonderful memories
+            and don't forget to take some time to enjoy yourself.
+            <br><br>
+            You have been a good friend, and I genuinely
+            appreciate the memories and moments we have shared.
+            <br><br>
+            I hope this coming year brings you plenty of
+            happiness, success and beautiful experiences.
+        </div>
+        <button class="close-btn" onclick="closeLetter(1)">
+            Close Letter
+        </button>
+    </div>
+</div>
+<!-- ================================= -->
+<!-- LETTER 2 -->
+<!-- ================================= -->
+<div class="popup" id="popup2">
+    <div class="popup-content">
+        <h2>All the Best, Future Doctor!</h2>
+        <img src="vaish2.jpg" alt="Vaish picture 2">
+        <div class="message">
+            Now, coming to FMGE!
+            <br><br>
+            I know preparing for an examination like this
+            isn't always easy. There will be days when things
+            seem difficult, and there may be moments when
+            you start doubting yourself.
+            <br><br>
+            But remember how far you have already come.
+            Trust your preparation, believe in your abilities
+            and keep pushing forward.
+            <br><br>
+            Don't let a few difficult days make you forget
+            how capable you are.
+            <br><br>
+            Wishing you all the very best for FMGE.
+            I genuinely hope to see you achieve everything
+            you have been working towards.
+        </div>
+        <button class="close-btn" onclick="closeLetter(2)">
+            Close Letter
+        </button>
+    </div>
+</div>
+<!-- ================================= -->
+<!-- LETTER 3 -->
+<!-- ================================= -->
+<div class="popup" id="popup3">
+    <div class="popup-content">
+        <h2>A Little Apology</h2>
+        <img src="vaish3.jpg" alt="Vaish picture 3">
+        <div class="message">
+            There is something I would like to say.
+            <br><br>
+            If I have ever hurt you, knowingly or unknowingly,
+            through my words, actions or behaviour,
+            I am genuinely sorry.
+            <br><br>
+            Sometimes we may say or do things without
+            realising how they affect another person.
+            That doesn't make it right, and I hope you know
+            that hurting you was never my intention.
+            <br><br>
+            Whatever the circumstances, I sincerely wish
+            you nothing but good things in life.
+        </div>
+        <button class="close-btn" onclick="closeLetter(3)">
+            Close Letter
+        </button>
+    </div>
+</div>
+<!-- ================================= -->
+<!-- LETTER 4 -->
+<!-- ================================= -->
+<div class="popup" id="popup4">
+    <div class="popup-content">
+        <h2>Never Change, Vaish!</h2>
+        <img src="vaish4.jpg" alt="Vaish picture 4">
+        <div class="message">
+            One thing I genuinely admire about you is
+            your kindness. You have a beautiful personality,
+            and of course, you're beautiful too!
+            <br><br>
+            I hope you always remain the person you are.
+            Keep that lovely personality and that kind heart.
+            Don't let the world change the good things
+            that make you, YOU.
+            <br><br>
+            Also, please don't ever lose that huge appetite
+            of yours! Some things simply shouldn't change.
+            <br><br>
+            And your dancing skills deserve a special mention.
+            Never stop dancing and enjoying yourself.
+            <br><br>
+            Stay happy, stay confident and always be yourself.
+        </div>
+        <button class="close-btn" onclick="closeLetter(4)">
+            Close Letter
+        </button>
+    </div>
+</div>
+<!-- ================================= -->
+<!-- LETTER 5 -->
+<!-- ================================= -->
+<div class="popup" id="popup5">
+    <div class="popup-content">
+        <h2>Your Future Awaits</h2>
+        <img src="vaish5.jpg" alt="Vaish picture 5">
+        <div class="message">
+            One day, I genuinely believe you are going
+            to become one of the best doctors.
+            <br><br>
+            I hope you become a doctor who is not only
+            knowledgeable but also compassionate,
+            approachable and someone patients can trust.
+            <br><br>
+            There is still a long journey ahead,
+            but I hope you enjoy every step of it.
+            <br><br>
+            May you achieve your dreams, make your family
+            proud and build a future that makes you happy.
+            <br><br>
+            I wish you nothing but success in everything
+            that lies ahead.
+        </div>
+        <button class="close-btn" onclick="closeLetter(5)">
+            Close Letter
+        </button>
+    </div>
+</div>
+<!-- ================================= -->
+<!-- FINAL FRIENDSHIP NOTE -->
+<!-- ================================= -->
+<div class="bottom-note">
+    <h2>One Last Thing...</h2>
+    <div class="gold-line"></div>
+    <p>
+        Stayy happiest, Devil Vaish!
+        <br><br>
+        We may not be as close as we once were,
+        and life may take us in different directions.
+        But that doesn't mean the memories and the
+        good moments we shared have to lose their value.
+        <br><br>
+        Some people become part of our lives for a reason,
+        and I am glad our paths crossed.
+        <br><br>
+        Wherever life takes you, I hope you find happiness,
+        success, good people and countless reasons to smile.
+        <br><br>
+        Take care of yourself, keep chasing your dreams
+        and never stop being the wonderful person you are.
+        <br><br>
+        Wishing you a beautiful year ahead, Vaish.
+        <br><br>
+        With warm wishes,
+        <br>
+        Your friend.
+    </p>
+    <div class="gold-line"></div>
+</div>
+</div>
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
+<script>
+/* PASSWORD FUNCTION */
+function unlock() {
+    let enteredPassword =
+        document.getElementById("password").value;
+    if (enteredPassword === "DevilVaish") {
+        document.getElementById("lockPage").style.display = "none";
+        document.getElementById("mainPage").style.display = "block";
+        window.scrollTo(0, 0);
+    }
+    else {
+        document.getElementById("error").innerText =
+            "Wrong password! Try again.";
+    }
+}
+/* OPEN POPUP */
+function openLetter(number) {
+    document.getElementById("popup" + number)
+        .style.display = "flex";
+}
+/* CLOSE POPUP */
+function closeLetter(number) {
+    document.getElementById("popup" + number)
+        .style.display = "none";
+}
+/* CLOSE POPUP WHEN CLICKING OUTSIDE */
+document.querySelectorAll(".popup").forEach(function(popup) {
+    popup.addEventListener("click", function(event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    });
+});
+/* PRESS ESCAPE TO CLOSE POPUP */
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        document.querySelectorAll(".popup").forEach(function(popup) {
+            popup.style.display = "none";
+        });
+    }
+});
+</script>
+</body>
+</html>
