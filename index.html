@@ -3,11 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Devil Vaish</title>
+<title>Happy Birthday, Vaish!</title>
 <style>
-/* =================================
-   GENERAL DESIGN
-================================= */
 * {
     box-sizing: border-box;
 }
@@ -20,23 +17,19 @@
 }
 body {
     margin: 0;
-    padding: 0;
     background: var(--white);
     color: var(--black);
     font-family: Georgia, serif;
     font-style: italic;
     text-align: center;
 }
-/* =================================
-   PASSWORD PAGE
-================================= */
 #lockPage {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(135deg, #ffffff, #f5e8c4);
+    background: linear-gradient(135deg, white, #f5e8c4);
 }
 .lock-box {
     background: white;
@@ -64,9 +57,6 @@ input {
     text-align: center;
     font-size: 16px;
 }
-/* =================================
-   BUTTONS
-================================= */
 button {
     font-family: Georgia, serif;
     font-style: italic;
@@ -80,17 +70,14 @@ button {
     padding: 14px 28px;
     font-size: 16px;
 }
-.gold-button:hover {
+.gold-button:hover,
+.close-btn:hover {
     background: var(--darkgold);
 }
-/* =================================
-   MAIN PAGE
-================================= */
 #mainPage {
     display: none;
     padding: 20px 15px 40px;
 }
-/* HEADER */
 .header {
     max-width: 780px;
     margin: 25px auto 40px;
@@ -113,9 +100,6 @@ button {
     background: var(--gold);
     margin: 22px auto;
 }
-/* =================================
-   FIVE LETTER BUTTONS
-================================= */
 .letters {
     max-width: 680px;
     margin: 35px auto;
@@ -138,9 +122,6 @@ button {
 .letter-btn:last-child {
     grid-column: span 2;
 }
-/* =================================
-   POPUP BACKGROUND
-================================= */
 .popup {
     display: none;
     position: fixed;
@@ -151,9 +132,6 @@ button {
     align-items: center;
     padding: 15px;
 }
-/* =================================
-   POPUP CONTENT
-================================= */
 .popup-content {
     background: var(--white);
     border: 5px double var(--gold);
@@ -180,9 +158,6 @@ button {
     font-size: 28px;
     margin-bottom: 20px;
 }
-/* =================================
-   PHOTOGRAPH BORDERS
-================================= */
 .popup-content img {
     width: 100%;
     max-height: 350px;
@@ -191,9 +166,6 @@ button {
     border: 4px double var(--gold);
     padding: 7px;
 }
-/* =================================
-   MESSAGE BORDERS
-================================= */
 .message {
     border: 2px solid var(--gold);
     padding: 22px;
@@ -203,9 +175,6 @@ button {
     text-align: left;
     background: white;
 }
-/* =================================
-   CLOSE BUTTON
-================================= */
 .close-btn {
     background: var(--gold);
     color: white;
@@ -214,12 +183,6 @@ button {
     margin-top: 22px;
     font-size: 16px;
 }
-.close-btn:hover {
-    background: var(--darkgold);
-}
-/* =================================
-   FINAL FRIENDSHIP NOTE
-================================= */
 .bottom-note {
     max-width: 750px;
     margin: 55px auto 20px;
@@ -234,9 +197,6 @@ button {
     color: var(--gold);
     font-size: 29px;
 }
-/* =================================
-   MOBILE RESPONSIVENESS
-================================= */
 @media (max-width: 550px) {
     .header h1 {
         font-size: 34px;
@@ -268,24 +228,15 @@ button {
 </style>
 </head>
 <body>
-<!-- =================================
-     PASSWORD PAGE
-================================= -->
+<!-- PASSWORD PAGE -->
 <div id="lockPage">
-<div class="lock-box">
+    <div class="lock-box">
     <h1>A Little Something for Vaish</h1>
     <div class="gold-line"></div>
-    <p>
-        A little birthday surprise awaits you.
-    </p>
-    <p>
-        But first, you'll need the password.
-    </p>
-    <input
-        type="password"
-        id="password"
-        placeholder="Enter your password"
-    >
+    <p>A little birthday surprise awaits you.</p>
+    <p>But first, you'll need the password.</p>
+    <input type="password" id="password"
+           placeholder="Enter your password">
     <br>
     <button class="gold-button" onclick="unlock()">
         Unlock Your Surprise
@@ -293,15 +244,13 @@ button {
     <p id="error" style="color:red;"></p>
 </div>
 </div>
-<!-- =================================
-     MAIN BIRTHDAY PAGE
-================================= -->
+<!-- MAIN BIRTHDAY PAGE -->
 <div id="mainPage">
 <div class="header">
     <h1>Happy Birthday, Vaish!</h1>
     <div class="gold-line"></div>
     <p>
-        To my dear Devil Vaish,
+        To Vaish,
         <br><br>
         Another year, another reason to celebrate you.
         <br><br>
@@ -312,331 +261,192 @@ button {
         I hope they bring a smile to your face.
     </p>
 </div>
-<!-- FIVE LETTER BUTTONS -->
+<!-- LETTER BUTTONS -->
 <div class="letters">
     <button class="letter-btn" onclick="openLetter(1)">
         01. A Birthday Wish
     </button>
     <button class="letter-btn" onclick="openLetter(2)">
-        02. Future Doctor
+        02. All the Best, Future Doctor!
     </button>
     <button class="letter-btn" onclick="openLetter(3)">
         03. A Little Apology
     </button>
     <button class="letter-btn" onclick="openLetter(4)">
-        04. Never Change, Vaish
+        04. Never Change, Vaish!
     </button>
     <button class="letter-btn" onclick="openLetter(5)">
-        05. Your Future Awaits
+        05. Your Future Awaits, Doctor!
     </button>
 </div>
-<!-- =================================
-     LETTER 1: BIRTHDAY WISH
-================================= -->
+<!-- LETTER 1 -->
 <div class="popup" id="popup1">
     <div class="popup-content">
-        <h2>A Birthday Wish</h2>
+        <h2>01. A Birthday Wish</h2>
         <img src="vaish1.jpg" alt="Vaish picture 1">
         <div class="message">
             Happy Birthday, Vaish!
             <br><br>
-            First of all, I hope you have the most wonderful
-            birthday. I hope today brings you plenty of
-            happiness, laughter and beautiful memories.
-            You deserve to enjoy your special day, so please
-            take a break from all your responsibilities
-            and enjoy yourself to the fullest.
+            First of all, I hope you have the most wonderful birthday. I hope today brings you plenty of happiness, laughter and beautiful memories. You deserve to enjoy your special day, so please take a break from all your responsibilities and enjoy yourself to the fullest.
             <br><br>
-            I just wanted to take this opportunity to tell
-            you that I'm genuinely glad our paths crossed.
-            You have been a good friend, and I appreciate
-            the moments, conversations, laughter and
-            memories we have shared.
+            I just wanted to take this opportunity to tell you that I’m genuinely glad our paths crossed. You have been a good friend, and I appreciate the moments, conversations, laughter and memories we have shared.
             <br><br>
-            Life has a funny way of bringing different
-            people into our lives, and I'm glad I got to
-            know someone like you along the way.
+            Life has a funny way of bringing different people into our lives, and I’m glad I got to know someone like you along the way.
             <br><br>
-            As you step into another year of your life,
-            I hope you get closer to all the dreams you
-            have been working towards. May this year bring
-            you new opportunities, wonderful experiences,
-            good health and countless reasons to smile.
+            As you step into another year of your life, I hope you get closer to all the dreams you have been working towards. May this year bring you new opportunities, wonderful experiences, good health and countless reasons to smile.
             <br><br>
-            Keep smiling, keep enjoying life and never
-            forget to celebrate yourself.
+            Keep smiling, keep enjoying life and never forget to celebrate yourself.
             <br><br>
             Once again, Happiest Birthday, Vaish!
         </div>
-        <button class="close-btn" onclick="closeLetter(1)">
-            Close Letter
-        </button>
+        <button class="close-btn" onclick="closeLetter(1)">Close</button>
     </div>
 </div>
-<!-- =================================
-     LETTER 2: FMGE
-================================= -->
+<!-- LETTER 2 -->
 <div class="popup" id="popup2">
     <div class="popup-content">
-        <h2>All the Best, Future Doctor!</h2>
+        <h2>02. All the Best, Future Doctor!</h2>
         <img src="vaish2.jpg" alt="Vaish picture 2">
         <div class="message">
             Now, coming to something important — FMGE!
             <br><br>
-            I know how much effort, time and dedication
-            it takes to prepare for an examination like this.
-            The journey isn't always going to be easy.
-            There will be days when you feel confident,
-            days when you feel exhausted and perhaps even
-            days when you question whether you're doing enough.
+            I know how much effort, time and dedication it takes to prepare for an examination like this. The journey isn’t always going to be easy. There will be days when you feel confident, days when you feel exhausted and perhaps even days when you question whether you’re doing enough.
             <br><br>
-            But I want you to remember something:
-            you have already come a long way to reach this stage.
+            But I want you to remember something: you have already come a long way to reach this stage.
             <br><br>
-            Don't let a difficult topic, a bad mock
-            examination or an unproductive day make you
-            doubt your abilities. One examination does
-            not define your intelligence or the kind
-            of doctor you are capable of becoming.
+            Don’t let a difficult topic, a bad mock examination or an unproductive day make you doubt your abilities. One examination does not define your intelligence or the kind of doctor you are capable of becoming.
             <br><br>
-            Trust the preparation you have put in.
-            Be consistent, believe in yourself and take
-            things one day at a time. You don't have to
-            know everything perfectly; you just need
-            to keep learning and moving forward.
+            Trust the preparation you have put in. Be consistent, believe in yourself and take things one day at a time. You don’t have to know everything perfectly; you just need to keep learning and moving forward.
             <br><br>
-            I genuinely hope all your hard work pays off.
-            I hope one day you look back at this preparation
-            period and feel proud that you didn't give up.
+            I genuinely hope all your hard work pays off. I hope one day you look back at this preparation period and feel proud that you didn’t give up.
             <br><br>
-            Wishing you all the very best for FMGE.
-            May you clear it with flying colours and move
-            one step closer to the future you have always wanted.
+            Wishing you all the very best for FMGE. May you clear it with flying colours and move one step closer to the future you have always wanted.
             <br><br>
-            You've got this, Vaish!
+            You’ve got this, Vaish!
         </div>
-        <button class="close-btn" onclick="closeLetter(2)">
-            Close Letter
-        </button>
+        <button class="close-btn" onclick="closeLetter(2)">Close</button>
     </div>
 </div>
-<!-- =================================
-     LETTER 3: APOLOGY
-================================= -->
+<!-- LETTER 3 -->
 <div class="popup" id="popup3">
     <div class="popup-content">
-        <h2>A Little Apology</h2>
+        <h2>03. A Little Apology</h2>
         <img src="vaish3.jpg" alt="Vaish picture 3">
         <div class="message">
-            There is something I would like to tell you,
-            and I think your birthday is a good opportunity
-            to say it.
+            There is something I would like to tell you, and I think your birthday is a good opportunity to say it.
             <br><br>
-            If I have ever hurt you, knowingly or unknowingly,
-            through something I said, something I did or
-            the way I behaved, I sincerely apologise.
+            If I have ever hurt you, knowingly or unknowingly, through something I said, something I did or the way I behaved, I sincerely apologise.
             <br><br>
-            Sometimes, we don't realise how our words
-            or actions affect the people around us.
-            There might have been moments when I could
-            have handled things better, understood you
-            better or simply been more considerate.
+            Sometimes, we don’t realise how our words or actions affect the people around us. There might have been moments when I could have handled things better, understood you better or simply been more considerate.
             <br><br>
-            I know that saying sorry doesn't necessarily
-            change what has happened, but I still wanted
-            you to know that I genuinely mean it.
+            I know that saying sorry doesn’t necessarily change what has happened, but I still wanted you to know that I genuinely mean it.
             <br><br>
-            I never intended to make you feel bad or hurt
-            you in any way. If there were moments when
-            I fell short as a friend, I'm sorry for that too.
+            I never intended to make you feel bad or hurt you in any way. If there were moments when I fell short as a friend, I’m sorry for that too.
             <br><br>
-            I believe that every friendship teaches us
-            something, and I'm grateful for the good
-            moments and experiences we have shared.
+            I believe that every friendship teaches us something, and I’m grateful for the good moments and experiences we have shared.
             <br><br>
-            Regardless of anything that may have happened,
-            I genuinely wish you happiness and success.
-            I hope you continue meeting people who appreciate
-            you, support you and bring positivity into your life.
+            Regardless of anything that may have happened, I genuinely wish you happiness and success. I hope you continue meeting people who appreciate you, support you and bring positivity into your life.
             <br><br>
             Take care, Vaish.
         </div>
-        <button class="close-btn" onclick="closeLetter(3)">
-            Close Letter
-        </button>
+        <button class="close-btn" onclick="closeLetter(3)">Close</button>
     </div>
 </div>
-<!-- =================================
-     LETTER 4: PERSONALITY
-================================= -->
+<!-- LETTER 4 -->
 <div class="popup" id="popup4">
     <div class="popup-content">
-        <h2>Never Change, Devil Vaish!</h2>
+        <h2>04. Never Change, Vaish!</h2>
         <img src="vaish4.jpg" alt="Vaish picture 4">
         <div class="message">
-            You know, one thing I genuinely appreciate
-            about you is your kindness.
+            You know, one thing I genuinely appreciate about you is your kindness.
             <br><br>
-            You have a lovely personality, and you're
-            beautiful too! But beyond appearances,
-            I hope you never lose the qualities that
-            make you who you are.
+            You have a lovely personality, and you’re beautiful too! But beyond appearances, I hope you never lose the qualities that make you who you are.
             <br><br>
-            Keep that kind heart, your cheerful personality
-            and the little things that make you uniquely Vaish.
-            Don't feel the need to change yourself just to
-            fit into someone else's expectations.
+            Keep that kind heart, your cheerful personality and the little things that make you uniquely Vaish. Don’t feel the need to change yourself just to fit into someone else’s expectations.
             <br><br>
-            And please, never lose that huge appetite of yours!
-            I don't think I need to explain this one.
-            Keep enjoying your food and being the same
-            food-loving Vaish!
+            And please, never lose that huge appetite of yours! I don’t think I need to explain this one. Keep enjoying your food and being the same food-loving Vaish!
             <br><br>
-            Also, your dancing skills deserve a special mention.
-            Never stop dancing, enjoying yourself and showing
-            off those wonderful moves. It's one of those
-            things that make you, YOU.
+            Also, your dancing skills deserve a special mention. Never stop dancing, enjoying yourself and showing off those wonderful moves. It’s one of those things that make you, YOU.
             <br><br>
-            As life gets busier and responsibilities increase,
-            I hope you never forget to have fun, laugh at
-            silly things and enjoy the little moments.
+            As life gets busier and responsibilities increase, I hope you never forget to have fun, laugh at silly things and enjoy the little moments.
             <br><br>
-            Stay kind, stay confident, stay beautiful
-            and most importantly, stay true to yourself.
+            Stay kind, stay confident, stay beautiful and most importantly, stay true to yourself.
             <br><br>
-            The world already has enough people trying
-            to be someone else. Keep being Vaish!
+            The world already has enough people trying to be someone else. Keep being Vaish!
         </div>
-        <button class="close-btn" onclick="closeLetter(4)">
-            Close Letter
-        </button>
+        <button class="close-btn" onclick="closeLetter(4)">Close</button>
     </div>
 </div>
-<!-- =================================
-     LETTER 5: FUTURE DOCTOR
-================================= -->
+<!-- LETTER 5 -->
 <div class="popup" id="popup5">
     <div class="popup-content">
-        <h2>Your Future Awaits, Doctor!</h2>
+        <h2>05. Your Future Awaits, Doctor!</h2>
         <img src="vaish5.jpg" alt="Vaish picture 5">
         <div class="message">
             And finally, a little message about your future.
             <br><br>
-            I genuinely believe that one day you are
-            going to become one of the best doctors.
+            I genuinely believe that one day you are going to become one of the best doctors.
             <br><br>
-            I hope you become someone who is not only
-            excellent in medical knowledge but also
-            compassionate, understanding and approachable.
-            Someone who listens to patients, understands
-            their struggles and makes them feel comfortable
-            even during their most difficult moments.
+            I hope you become someone who is not only excellent in medical knowledge but also compassionate, understanding and approachable. Someone who listens to patients, understands their struggles and makes them feel comfortable even during their most difficult moments.
             <br><br>
-            Medicine is not always an easy journey.
-            There will be long working hours, challenging
-            cases, difficult decisions and days when
-            you feel physically and mentally exhausted.
-            But I hope you never lose the passion and
-            determination that brought you this far.
+            Medicine is not always an easy journey. There will be long working hours, challenging cases, difficult decisions and days when you feel physically and mentally exhausted. But I hope you never lose the passion and determination that brought you this far.
             <br><br>
-            I hope you get the opportunity to work towards
-            your dreams, explore new possibilities and
-            achieve everything you have been hoping for.
+            I hope you get the opportunity to work towards your dreams, explore new possibilities and achieve everything you have been hoping for.
             <br><br>
-            One day, I hope to hear about all the wonderful
-            things you have accomplished. I hope you make
-            your family proud, build a career you genuinely
-            enjoy and become the doctor you have always wanted to be.
+            One day, I hope to hear about all the wonderful things you have accomplished. I hope you make your family proud, build a career you genuinely enjoy and become the doctor you have always wanted to be.
             <br><br>
-            And when that day comes, remember to be proud
-            of yourself and how far you have travelled.
+            And when that day comes, remember to be proud of yourself and how far you have travelled.
             <br><br>
-            Wishing you a future filled with success,
-            happiness and endless opportunities.
+            Wishing you a future filled with success, happiness and endless opportunities.
             <br><br>
             Future Dr Vaish — looking forward to seeing you shine!
         </div>
-        <button class="close-btn" onclick="closeLetter(5)">
-            Close Letter
-        </button>
+        <button class="close-btn" onclick="closeLetter(5)">Close</button>
     </div>
 </div>
-<!-- =================================
-     FINAL FRIENDSHIP NOTE
-================================= -->
+<!-- FINAL FRIENDSHIP NOTE -->
 <div class="bottom-note">
     <h2>One Last Thing...</h2>
     <div class="gold-line"></div>
     <p>
-        <strong>Stayy Happiest, Devil Vaish!</strong>
+        Stay happiest, Vaish!
         <br><br>
-        Before you leave this little birthday surprise,
-        I just wanted to leave you with one last message.
+        I know things might not be exactly the same as they used to be. We may not talk as often as before, and life has taken us in different directions.
         <br><br>
-        We may not be as close as we once were, and perhaps
-        life has taken us in different directions. Our
-        conversations might not be as frequent, and things
-        might not be exactly the same as before. But that
-        doesn't mean I have forgotten the good moments,
-        the laughter or the memories we shared.
+        But that doesn't mean the memories and moments we shared have become any less meaningful to me.
         <br><br>
-        I believe that not every friendship needs to remain
-        the same forever for it to have been meaningful.
-        Some people leave behind memories that we will
-        always look back on with a smile, and I'm glad
-        I got to share some of those moments with you.
+        I believe not every friendship has to remain the same throughout life for it to have been special. Some people become part of our lives, leave us with beautiful memories and continue to hold a place in our thoughts.
         <br><br>
-        I genuinely hope life treats you kindly.
-        I hope you find happiness in the little things,
-        meet wonderful people, achieve your dreams and
-        never have to lose the beautiful parts of yourself
-        along the way.
+        I genuinely hope life treats you well. I hope you find happiness in the little things, surround yourself with good people and achieve everything you have been dreaming of.
         <br><br>
-        Keep eating, keep dancing, keep smiling and keep
-        being the Devil Vaish we know!
+        Keep eating, keep dancing, keep smiling and never lose the wonderful person you are.
         <br><br>
-        No matter where life takes us, I will always
-        wish good things for you.
+        No matter how busy life gets, I will always wish you well.
         <br><br>
-        Take care of yourself, future doctor.
-        You deserve a wonderful life ahead.
+        Happy Birthday once again, Vaish!
         <br><br>
-        <strong>Stayy Happiest, Devil Vaish.</strong>
-        <br><br>
-        With warm wishes,
-        <br>
         Your friend.
     </p>
-    <div class="gold-line"></div>
 </div>
 </div>
-<!-- =================================
-     JAVASCRIPT
-================================= -->
+<!-- JAVASCRIPT -->
 <script>
-/* PASSWORD FUNCTION */
 function unlock() {
-    let enteredPassword =
+    const enteredPassword =
         document.getElementById("password").value;
     if (enteredPassword === "DevilVaish") {
         document.getElementById("lockPage").style.display = "none";
         document.getElementById("mainPage").style.display = "block";
-        window.scrollTo(0, 0);
-    }
-    else {
+    } else {
         document.getElementById("error").innerText =
-            "Wrong password! Try again.";
+            "Incorrect password. Please try again.";
     }
 }
-/* OPEN LETTER */
 function openLetter(number) {
-    document.getElementById("popup" + number)
-        .style.display = "flex";
+    document.getElementById("popup" + number).style.display = "flex";
 }
-/* CLOSE LETTER */
 function closeLetter(number) {
-    document.getElementById("popup" + number)
-        .style.display = "none";
+    document.getElementById("popup" + number).style.display = "none";
 }
 /* CLOSE WHEN CLICKING OUTSIDE */
 document.querySelectorAll(".popup").forEach(function(popup) {
@@ -646,18 +456,18 @@ document.querySelectorAll(".popup").forEach(function(popup) {
         }
     });
 });
+/* ENTER KEY TO UNLOCK */
+document.getElementById("password").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        unlock();
+    }
+});
 /* ESCAPE KEY TO CLOSE */
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
         document.querySelectorAll(".popup").forEach(function(popup) {
             popup.style.display = "none";
         });
-    }
-});
-/* ENTER KEY FOR PASSWORD */
-document.getElementById("password").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        unlock();
     }
 });
 </script>
